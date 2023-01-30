@@ -5,7 +5,7 @@ module.exports = {
             config: {
             repository: {
                 owner: 'BilibiliSheepCode',
-                name: 'github-repo-name',
+                name: 'Universe',
             },
             prerelease: false,
             draft: true,
@@ -13,3 +13,5 @@ module.exports = {
         },
     ],
 }
+
+module.exports = config;

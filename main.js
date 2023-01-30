@@ -1,6 +1,7 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
-require('update-electron-app')()
+// require('update-electron-app')()
+const mode = process.argv[2];
 
 const createWindow = () => {
   const win = new BrowserWindow({
@@ -11,7 +12,12 @@ const createWindow = () => {
     },
   });
   ipcMain.handle('ping', () => 'pong')
-  win.loadFile('index.html');
+  // if(mode !== 'dev'){
+  //   win.loadFile('./react/uvsui/build/index.html')
+  // } else {
+  //   win.loadURL('http://localhost:3000/')
+  // }
+  win.loadFile('./index.html')
 };
 
 app.whenReady().then(() => {

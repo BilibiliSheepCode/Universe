@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron-forge start",
     "package": "electron-forge package",
-    "make": "electron-forge make",
-    "e-start": "electron .",
+    "make": "cd react/uvsui/ && npm run build && cd ../../ && electron-forge make",
+    "e-start": "electron . dev",
     "publish": "electron-forge publish"
   },
   "keywords": [
