@@ -12,12 +12,11 @@ const createWindow = () => {
     },
   });
   ipcMain.handle('ping', () => 'pong')
-  // if(mode !== 'dev'){
-  //   win.loadFile('./react/uvsui/build/index.html')
-  // } else {
-  //   win.loadURL('http://localhost:3000/')
-  // }
-  win.loadFile('./index.html')
+  if(mode !== 'dev'){
+    win.loadFile('./react/uvsui/build/index.html')
+  } else {
+    win.loadURL('http://localhost:3000/')
+  }
 };
 
 app.whenReady().then(() => {
